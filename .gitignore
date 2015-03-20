@@ -1,9 +1,10 @@
-template/*
 *.aux
 *.bbl
 *.blg
 *.log
 *.toc
+*.fls
+*.out
 main.pdf
 main-blx.bib
 *.bcf

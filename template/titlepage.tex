@@ -1,0 +1,105 @@
+% \newgeometry{top=0,bottom=0,left=30mm,right=30mm}
+
+\begin{titlepage}
+
+% \begin{textblock}{21}(0,0)
+% \centering
+% \begin{minipage}[t][297mm][t]{150mm}
+% \setlength{\textheight}{17cm}
+
+
+% \begin{adjustwidth}{1cm}{-2cm} % print version
+\begin{adjustwidth}{-1cm}{-1cm} % twoside=semi (PDF version)
+\enlargethispage{10cm}
+\vspace*{-3.5cm}
+\centering
+
+\fontfamily{phv}\selectfont
+
+\vspace*{10mm}
+
+\includegraphics[width=29mm]{institution}
+
+\vspace*{45mm}
+
+\fontsize{13}{13}\selectfont
+
+\LDinsertauthor
+
+\vspace*{10mm}
+
+{\fontsize{16}{20}\selectfont\bfseries\LDinserttitle\par}
+
+
+\vspace*{30mm}
+
+\doublespacing
+
+{\fontsize{13}{13}\selectfont\bfseries\LDinsertworktitle}
+
+\fontsize{11}{11}\selectfont
+
+
+{\fontsize{13}{13}\selectfont\bfseries \LDinsertuniversity}
+
+
+\LDinsertinstitute\\
+
+
+\vspace*{10mm}
+
+
+\doublespacing 
+
+
+
+
+
+
+\ifx\LDinsertinstitutehead\empty\else
+\LDinsertinstitutehead\\
+\fi
+
+\ifx\LDinsertsupervisor\empty\else
+\LDinsertsupervisor\\
+\fi
+
+\LDinsertcosupervisor
+
+% %usually not mentioned on titlepage:
+% Evaluator: \LDinsertevaluator
+% \ifx\LDinsertcosupervisor\empty\else
+% 	Co-Supervisor: \\
+% \fi
+
+\vspace*{30mm}
+
+\fontsize{8}{8}\selectfont
+\ifx\LDinsertsubmissiontown\empty\else
+\LDinsertsubmissiontown,~%
+\fi
+\ifx\LDinsertsubmissionmonth\empty\else
+\LDinsertsubmissionmonth~%
+\fi
+\LDinsertsubmissionyear
+
+
+% \end{minipage}
+% \end{textblock}
+% \rule{0pt}{\textheight}
+% \restoregeometry
+\end{adjustwidth}
+\vspace*{-10cm}
+\end{titlepage}
+
+%% if myaddcolophon is set to "true", colophon is added:
+\ifthenelse{\boolean{LDaddcolophon}}{
+  \newpage
+  \thispagestyle{empty}  %% no page header or footer
+
+  ~
+  \vfill
+  \LDinsertcolophon
+}{\newpage~}
+\newpage
+
