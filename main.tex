@@ -1,0 +1,137 @@
+\documentclass[
+	papersize=A4,
+		%% e.g., "A4", "letter", "legal", "executive", ...
+		%% The size of the paper of the resulting PDF file.	
+	fontsize=11pt, %%% WARNING -- DOES NOT HAVE ANY EFFECT
+	 	%% e.g., 10pt, 11pt, 12pt
+	 	%% The font size of the main text in pt (points).
+	laterality=twoside, 
+	 	%% "oneside" or "twoside"
+	 	%% Either you are creating a document which is printed on both, left pages
+	 	%% and right pages (twoside) or you create a document which is printed
+	 	%% on right pages only (oneside).
+	draft=false,
+	 	%% "true" or "false"
+	 	%% Use draft mode? If true, included graphics are replaced by empty
+	 	%% rectangles (of same size) and overfull boxes (in margin space) are
+	 	%% marked with black box (-> easy to spot!)
+	parskip=half,
+	 	%% e.g., "no", "full", "half", ...
+	 	%% How to separate paragraphs: indention ("no") or spacing ("half",
+	 	%% "full", ...).
+	BCOR=0mm,
+	 	%% Inner binding correction. This value depends on the method which is
+	 	%% being used to bind your printed result. Some techniques do not
+	 	%% require a binding correction at all ("0mm"), other require for
+	 	%% example "5mm". Refer to KOMA script documentation for a detailed
+	 	%% explanation what a binding correction is and how to measure it.
+	linespread=1.05,
+	 	%% e.g., 1.0, 1.5, 2.0
+	 	%% Line spacing in %/100. For example 1.5 means 150% of the usual line
+	 	%% spacing. Please use with caution: 100% ("1.0") is fine because the
+	 	%% font was designed for it.
+	language={ngerman,american},
+	 	%% "english,ngerman", "ngerman,english", ...
+	 	%% NOTE: The *last* language is the active one!
+	 	%% See babel documentation for further details.
+	biblatex, % use biblatex
+	% bibtex % use bibtex
+		%% Choose the bibliography system you want to use, either 
+		%% "biblatex" or "bibtex". Note that you also have to change the 
+		%% bibfile below to reflect the correct one. 
+	bibfile=99--references.bib,
+	% bibfile=references-bibtex.bib,
+	 	%% Name of the biblatex file that holds the references.
+	biblatexstyle=alphabetic,
+	% biblatexstyle=authoryear,
+	 	%% BibLaTeX-settings: (see biblatex reference for further description)
+	 	%% e.g., "alphabetic", "authoryear", ...
+	 	%% The biblatex style which is being used for referencing. See
+	 	%% biblatex documentation for further details and more values.
+	 	%%
+	 	%% CAUTION: if you change the style, please check for (in)compatible
+	 	%%          "biblatex" package options in the file
+	 	%%          "template/preamble.tex"! For example: "alphabetic" does
+	 	%%          not have an option "dashed=..." and causes an error if it
+	 	%%          does not get removed from the list of options.
+	biblatexdashed=false,  %% "true" or "false"
+	 	%% If true: replace recurring reference authors with a dash.
+	biblatexbackref=true,  %% "true" or "false"
+	 	%% If true: create backward links from reference to citations.
+	bibtexstyle=alpha, 
+		%% bibtex style to use, e.g. "alpha", "plain", "authordate1", ...
+	dispositioncolor={30,103,182},
+        % dispositioncolor={0.9636,0.5287,0,0},
+	 	%% e.g., "30,103,182" (blue/turquois), "0,0,0" (black), ...
+	 	%% Color of the headings and so forth in RGB (red,green,blue) values.
+	colorlinks=true, %% "true" or "false"
+	 	%% Enables or disables colored links (hyperref package).
+    titlepage=titlepage,
+	 	%% file name (without .tex) of title page file in template/ directory
+	todonotesoptions={color=Dandelion,bordercolor=white},
+	 	%% e.g., "" (empty), "disable", ...
+	 	%% Options for the todonotes-package. If "disable", all todonotes will
+	 	%% be hidden (including listoftodos).
+	addcolophon=true, %% "true" or "false"
+		%% If set to "true": a colophon (with notes about this document
+		%% template, LaTeX, ...) is added after the title page.
+		%% Please do not set to "false" without a good reason. The colophon
+		%% helps your readers to get in touch with LaTeX and to find this template.
+	addlistoftodos=false, %% "true" or "false"
+		%% If set to "true": the current list of open todos is added after the
+		%% table of contents. If \mytodonotesoptions is set to "disable", no
+		%% list of todos is added, independent of this setting here.
+]{longdoc}
+
+% \addbibresource{99--references.bib} % for sublime text complection to work
+
+%% ========================================================================
+%%%% Document metadata
+%% ========================================================================
+
+%% general metadata:
+\LDauthor{Max Mustermann} 
+\LDtitle{Title of Your Work}
+\LDsubject{Subject used for PDF Info}  
+\LDkeywords{Keywords used for PDF Info} 
+
+%% this information is used only for generating the title page:
+\LDworktitle{Thesis}  
+\LDuniversity{Technische Universität Humbug} 
+\LDinstitute{Institut für Dokumentenerstellung}
+\LDinstitutehead{Univ.-Prof.\ Dipl.-Ing.\ Dr.\,techn.~Hans Wurst} 
+\LDsupervisor{Univ.-Prof.\ Dipl.-Ing.\ Dr.\,techn.~Franz Fraß} 
+\LDcosupervisor{Dipl.-Ing.\ Dr.\,techn.~Max Mann}
+\LDevaluator{Univ.-Prof.\ Dipl.-Ing.\ Dr.techn.~Ingo Igel} 
+% \LDhomestreet{} %% your home street (with house number)
+\LDhometown{Humbug} %% your home town
+\LDhomepostalnumber{1234} %% your postal number of home town
+\LDsubmissionmonth{Juli} %% month you are handing in
+\LDsubmissionyear{2045} %% year you are handing in
+\LDsubmissiontown{\LDinserthometown} %% town of handing in (or \myhometown)
+
+%% additional information for generic_documentation title page
+% \LDid{1234567} %% Matrikelnummer
+% \LDlecture{LECTURE} %% 
+
+% \usepackage{showframe} % shows the text frame (margins)
+
+
+%% ========================================================================
+%%%% Main Document
+%% ========================================================================
+
+\begin{document}
+
+\input{01--introduction}
+\input{02--preliminaries}
+\input{template/example-style-chapter}
+
+\appendix
+
+\addpart*{Appendix}
+\input{acronyms}
+\LDinsertbibliography
+
+\end{document}
+
