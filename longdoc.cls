@@ -227,7 +227,7 @@
 	maxnames=6,
 	minnames=2,
 	mincrossrefs=99,
-	firstinits=true,
+	giveninits=true,
 	]{biblatex}
 
 	\addbibresource{\LD@bibfile} %% remove, if using BibTeX instead of biblatex
@@ -374,28 +374,28 @@
 
 % \renewcommand{\emph}[1]{{\color{DispositionColor}\textit{#1}}}
 
-\usepackage[explicit]{titlesec}
-\titleformat{\chapter}[hang]%
-	{\acresetall\sffamily\bfseries\color{DispositionColor}}% format
-	% {\fontsize{80pt}{0pt}\selectfont\thechapter}% label
-	{\raisebox{-6pt}{\tikz{\node[fill=DispositionColor,inner sep=6pt]{\color{white}\fontfamily{hls}\fontsize{85pt}{0pt}\selectfont\thechapter};}}}
-	{25pt}% separation
-	{%
-	  %\fbox{%
-	  	\fontfamily{hls}
-		\fontsize{20pt}{23pt}\selectfont
-		\begin{minipage}[b]{10cm}%
-			\raggedright{#1}%
-		\end{minipage}%
-	 %}
-	}% before
-	% [\vspace*{-10pt}\rule{\textwidth}{5pt}] %after
+% \usepackage[explicit]{titlesec}
+% \titleformat{\chapter}[hang]%
+% 	{\acresetall\sffamily\bfseries\color{DispositionColor}}% format
+% 	% {\fontsize{80pt}{0pt}\selectfont\thechapter}% label
+% 	{\raisebox{-6pt}{\tikz{\node[fill=DispositionColor,inner sep=6pt]{\color{white}\fontfamily{hls}\fontsize{85pt}{0pt}\selectfont\thechapter};}}}
+% 	{25pt}% separation
+% 	{%
+% 	  %\fbox{%
+% 	  	\fontfamily{hls}
+% 		\fontsize{20pt}{23pt}\selectfont
+% 		\begin{minipage}[b]{10cm}%
+% 			\raggedright{#1}%
+% 		\end{minipage}%
+% 	 %}
+% 	}% before
+% 	% [\vspace*{-10pt}\rule{\textwidth}{5pt}] %after
 
 
 % \newcommand{\chapterbreak}{\cleardoublepage}
 
-\addtokomafont{disposition}{\fontfamily{hls}\selectfont}
-\addtokomafont{title}{\fontsize{20pt}{24pt}\fontfamily{hls}\selectfont}
+%\addtokomafont{disposition}{\fontfamily{hls}\selectfont}
+%\addtokomafont{title}{\fontsize{20pt}{24pt}\fontfamily{hls}\selectfont}
 
 \usepackage[inline]{enumitem} %%
 \setlist{noitemsep}   %% kills the space between items
@@ -613,7 +613,7 @@
 	% \fontfamily{hlcn}\selectfont%
 	\vskip1ex
 	\begin{tcolorbox}[arc=0mm,colback=DispositionColor!10,boxrule=0mm,colframe=DispositionColor!10,breakable]%
-	{{\mbox{\bfseries\color{DispositionColor}Example~\ref{#1} {\rm(Continued)}:}}}
+	{{\mbox{\bfseries\color{DispositionColor}Example~\ref{#1} {\rmfamily(Continued)}:}}}
 	% \begin{changebar}
 }%
 {
