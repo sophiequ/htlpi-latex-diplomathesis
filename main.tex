@@ -116,6 +116,7 @@
 
 % \usepackage{showframe} % shows the text frame (margins)
 
+\input{00-0-custom-commands}
 
 %% ========================================================================
 %%%% Main Document
@@ -130,6 +131,9 @@
 \input{03--projektantrag}
 \input{04--vorstudie}
 \input{05--individueller-teil-schueler1}
+% weitere individuelle teile
+
+\input{90--zusammenfassung-ausblick}
 
 
 % \input{template/example-style-chapter}
@@ -137,8 +141,30 @@
 \appendix
 
 \addpart*{Anhänge}
-\input{acronyms}
+
 \LDinsertbibliography
+
+\listoffigures
+
+\listoftables
+
+\input{acronyms}
+
+\input{91--verfasserverzeichnis}
+
+\input{92--begleitprotokolle}
+
+\input{93--stundennachweise}
+
+Weitere Anhänge nach Bedarf:
+
+\begin{itemize}
+\item Benutzerhandbuch
+\item Administrationshandbuch
+\item Sprintberichte
+\item  Besprechungsprotokolle
+\end{itemize}
+
 
 \end{document}
 

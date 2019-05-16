@@ -78,6 +78,7 @@
 	                     %% twoside: document is printed on left and right sides
 	numbers=noendperiod,
     %twoside=semi
+    listof=numbered,
 }{scrbook}
 
 \LoadClass{scrbook}
