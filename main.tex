@@ -5,7 +5,7 @@
 	fontsize=12pt, 
 	 	%% e.g., 10pt, 11pt, 12pt
 	 	%% The font size of the main text in pt (points).
-	laterality=twoside, 
+	laterality=oneside, 
 	 	%% "oneside" or "twoside"
 	 	%% Either you are creating a document which is printed on both, left pages
 	 	%% and right pages (twoside) or you create a document which is printed
@@ -30,7 +30,7 @@
 	 	%% Line spacing in %/100. For example 1.5 means 150% of the usual line
 	 	%% spacing. Please use with caution: 100% ("1.0") is fine because the
 	 	%% font was designed for it.
-	language={ngerman,american},
+	language={american, ngerman},
 	 	%% "english,ngerman", "ngerman,english", ...
 	 	%% NOTE: The *last* language is the active one!
 	 	%% See babel documentation for further details.
@@ -72,7 +72,7 @@
 	 	%% e.g., "" (empty), "disable", ...
 	 	%% Options for the todonotes-package. If "disable", all todonotes will
 	 	%% be hidden (including listoftodos).
-	addcolophon=true, %% "true" or "false"
+	addcolophon=false, %% "true" or "false"
 		%% If set to "true": a colophon (with notes about this document
 		%% template, LaTeX, ...) is added after the title page.
 		%% Please do not set to "false" without a good reason. The colophon
@@ -91,12 +91,12 @@
 
 %% general metadata:
 \LDauthor{Max Mustermann} 
-\LDtitle{Title of Your Work}
+\LDtitle{Entwurf eines Versuchsstandes für Kreiselpumpen}
 \LDsubject{Subject used for PDF Info}  
 \LDkeywords{Keywords used for PDF Info} 
 
 %% this information is used only for generating the title page:
-\LDworktitle{Thesis}  
+\LDworktitle{DIPLOMARBEIT}  
 \LDuniversity{Technische Universität Humbug} 
 \LDinstitute{Institut für Dokumentenerstellung}
 \LDinstitutehead{Univ.-Prof.\ Dipl.-Ing.\ Dr.\,techn.~Hans Wurst} 
@@ -123,13 +123,20 @@
 
 \begin{document}
 
+% siehe https://docs.google.com/document/d/1aJE58I_N8w1tfuHNkwBzOSTkf6Wr4mj7EjtUQLPJhS0/edit#
+
 \input{01--introduction}
-\input{02--preliminaries}
-\input{template/example-style-chapter}
+\input{02--kooperationsvereinbarung}
+\input{03--projektantrag}
+\input{04--vorstudie}
+\input{05--individueller-teil-schueler1}
+
+
+% \input{template/example-style-chapter}
 
 \appendix
 
-\addpart*{Appendix}
+\addpart*{Anhänge}
 \input{acronyms}
 \LDinsertbibliography
 

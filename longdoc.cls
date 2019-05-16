@@ -77,7 +77,7 @@
 	\LD@laterality,        %% oneside: document is not printed on left and right sides, only right side
 	                     %% twoside: document is printed on left and right sides
 	numbers=noendperiod,
-        twoside=semi
+    %twoside=semi
 }{scrbook}
 
 \LoadClass{scrbook}
@@ -731,7 +731,7 @@ commentstyle=\color{darkgreen},breaklines=true,backgroundcolor=\color{Dispositio
 
 
 \usepackage{tabularx}
-
+\usepackage{makecell}
 
 
 \usepackage{dcolumn}
@@ -804,6 +804,8 @@ commentstyle=\color{darkgreen},breaklines=true,backgroundcolor=\color{Dispositio
 		\cleardoublepage
 		
 		\include{00-2-abstract}              %% Abstract
+
+        \include{00-3-foreword}
 
 		{
 			%\fontfamily{hls}\selectfont

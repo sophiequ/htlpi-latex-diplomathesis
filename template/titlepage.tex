@@ -12,59 +12,123 @@
 \begin{adjustwidth}{-1cm}{-1cm} % twoside=semi (PDF version)
 \enlargethispage{10cm}
 \vspace*{-3.5cm}
-\centering
+\begin{center}
 
 \fontfamily{phv}\selectfont
 
 \vspace*{10mm}
 
-\includegraphics[width=29mm]{institution}
+\begin{tabularx}{\linewidth}{p{25mm}Xp{25mm}}
+\includegraphics[width=25mm]{HTL-Pinkafeld_LOGO_NORMAL}
+& 
+\makecell{%
+\fontsize{14}{16}\selectfont \bfseries %
+HTBLVA Pinkafeld 
+\\ 
+\fontsize{14}{16}\selectfont \bfseries 
+Höhere Lehranstalt für Informatik
+\\
+\fontsize{10}{12}\selectfont 
+Ausbildungsschwerpunkt Mobile- and Internetprogramming 
+\\[-2pt]
+\fontsize{10}{10}\selectfont 
+bzw. Informatik und Management
+}
+&
+\includegraphics[width=25mm]{htl_at}
+\\ \hline
+\end{tabularx}
 
-\vspace*{45mm}
+\vspace*{30mm}
 
-\fontsize{13}{13}\selectfont
+{\fontsize{24}{24}\selectfont
+\bfseries\LDinsertworktitle}
 
-\LDinsertauthor
+\vspace*{20mm}
 
-\vspace*{10mm}
+{\fontsize{12}{12}\selectfont
+Gesamtprojekt}
 
-{\fontsize{16}{20}\selectfont\bfseries\LDinserttitle\par}
+{\fontsize{20}{22}\selectfont
+\bfseries\LDinserttitle\par}
+
+\end{center}
+
+\vspace*{35mm}
+{\fontfamily{phv}\selectfont
+
+{\bfseries 
+Konstruktion und hydraulische Auslegung des Versuchskreislaufes
+}\\
+\begin{tabularx}{\linewidth}{@{}p{4.5cm}p{3.5cm}p{2cm}X@{}}
+Maximilian Maier & 5AHIF & Betreuer: & Dr. Walter Turbo\\
+\end{tabularx}
+
+{\bfseries 
+Konzeption der Wirkungsgradmessung
+}\\
+\begin{tabularx}{\linewidth}{@{}p{4.5cm}p{3.5cm}p{2cm}X@{}}
+Elisabeth Muster & 5AHIF & Betreuer: & Dipl.-Ing. Hans Kreisel
+\end{tabularx}
+
+{\bfseries 
+Entwicklung eines Antriebssystems
+}\\
+\begin{tabularx}{\linewidth}{@{}p{4.5cm}p{3.5cm}p{2cm}X@{}}
+
+Peter Muster & 5AHIF & Betreuer/in: & Dipl.-Ing. Sandra Antrieb\\
+             &       &              & Ing. Josef Funke, BEd
+\end{tabularx}
+
 
 
 \vspace*{30mm}
 
-\doublespacing
-
-{\fontsize{13}{13}\selectfont\bfseries\LDinsertworktitle}
-
-\fontsize{11}{11}\selectfont
+ausgeführt im Schuljahr 2019/20
 
 
-{\fontsize{13}{13}\selectfont\bfseries \LDinsertuniversity}
+\rule{\linewidth}{0.5pt}
+
+Abgabevermerk:
+
+Datum: \today \hspace*{4cm} übernommen von: 
+}
+
+% \LDinsertauthor
 
 
-\LDinsertinstitute\\
+% {\fontsize{16}{20}\selectfont\bfseries\LDinserttitle\par}
 
 
-\vspace*{10mm}
+% \vspace*{30mm}
+
+% \doublespacing
+
+% {\fontsize{13}{13}\selectfont\bfseries\LDinsertworktitle}
+
+% \fontsize{11}{11}\selectfont
 
 
-\doublespacing 
+% {\fontsize{13}{13}\selectfont\bfseries \LDinsertuniversity}
 
 
+% \LDinsertinstitute\\
 
 
+% \vspace*{10mm}
 
 
-\ifx\LDinsertinstitutehead\empty\else
-\LDinsertinstitutehead\\
-\fi
+% \doublespacing 
 
-\ifx\LDinsertsupervisor\empty\else
-\LDinsertsupervisor\\
-\fi
+% \ifx\LDinsertinstitutehead\empty\else
+% \LDinsertinstitutehead\\
+% \fi
 
-\LDinsertcosupervisor
+% \ifx\LDinsertsupervisor\empty\else
+% \LDinsertsupervisor\\
+% \fi
+
+% \LDinsertcosupervisor
 
 % %usually not mentioned on titlepage:
 % Evaluator: \LDinsertevaluator
@@ -72,16 +136,16 @@
 % 	Co-Supervisor: \\
 % \fi
 
-\vspace*{30mm}
+% \vspace*{30mm}
 
-\fontsize{8}{8}\selectfont
-\ifx\LDinsertsubmissiontown\empty\else
-\LDinsertsubmissiontown,~%
-\fi
-\ifx\LDinsertsubmissionmonth\empty\else
-\LDinsertsubmissionmonth~%
-\fi
-\LDinsertsubmissionyear
+% \fontsize{8}{8}\selectfont
+% \ifx\LDinsertsubmissiontown\empty\else
+% \LDinsertsubmissiontown,~%
+% \fi
+% \ifx\LDinsertsubmissionmonth\empty\else
+% \LDinsertsubmissionmonth~%
+% \fi
+% \LDinsertsubmissionyear
 
 
 % \end{minipage}
@@ -100,6 +164,8 @@
   ~
   \vfill
   \LDinsertcolophon
-}{\newpage~}
+}{
+%\newpage~
+}
 \newpage
 
