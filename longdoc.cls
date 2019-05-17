@@ -592,7 +592,7 @@
 	\vskip1ex
 	% \begin{changebar}
 	\begin{tcolorbox}[arc=0mm,colback=DispositionColor!10,boxrule=0mm,colframe=DispositionColor!10,breakable]%
-	\refstepcounter{example}{{\mbox{\bfseries\color{DispositionColor}Example~\theexample:}}}
+	\refstepcounter{example}{{\mbox{\bfseries\color{DispositionColor}Beispiel~\theexample:}}}
 }%
 {
 	% \end{changebar}%
@@ -614,7 +614,7 @@
 	% \fontfamily{hlcn}\selectfont%
 	\vskip1ex
 	\begin{tcolorbox}[arc=0mm,colback=DispositionColor!10,boxrule=0mm,colframe=DispositionColor!10,breakable]%
-	{{\mbox{\bfseries\color{DispositionColor}Example~\ref{#1} {\rmfamily(Continued)}:}}}
+	{{\mbox{\bfseries\color{DispositionColor}Beispiel~\ref{#1} {\rmfamily(Fortsetzung)}:}}}
 	% \begin{changebar}
 }%
 {
