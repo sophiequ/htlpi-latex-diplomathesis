@@ -200,6 +200,9 @@
 	                          % on-screen reading; off: better for printout versions)
 }{hyperref}
 
+% must be before hyperref to recognize languages
+\usepackage[\LD@language]{babel} 
+
 \RequirePackage{hyperref}
 
 %\DeclareGraphicsExtensions{.pdf}
@@ -210,7 +213,7 @@
 
 \usepackage[utf8]{inputenc} %% UTF8 as input characters
 
-\usepackage[\LD@language]{babel}  
+
 
 \usepackage{scrpage2} %%  advanced page style using KOMA
 
@@ -546,7 +549,7 @@
 \makeatother
 %%%% end bugfix
 
-\usepackage[small]{complexity}
+% \usepackage[small]{complexity}
 
 \newtheoremstyle{blue}% name
 	{12pt}% Space above
@@ -559,70 +562,10 @@
 	{}% Theorem head spec (can be left empty, meaning `normal')
 
 \theoremstyle{blue}
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
 
 \setlist[enumerate]{font=\color{DispositionColor}}
 \setlist[itemize]{font=\color{DispositionColor}}
 \setlist[itemize,1]{label=\raisebox{0.3ex}{\tikz{\fill (0,0) rectangle (0.6ex,0.6ex);}}}
-
-
-%%%
-%% Example Environment
-%%%
-
-% NOTE: changebar package is included earlier in tugthesis.cls (HACK!)
-% \setlength{\changebarsep}{-5pt}
-% \setlength{\changebarwidth}{2pt}
-% \cbcolor{DispositionColor}
-
-\newcounter{example}[chapter]
-\renewcommand{\theexample}{\thechapter.\arabic{example}}
-\newenvironment{example}%
-{%
-	% \list{}{%
-		% \leftmargin0mm%
-		% \rightmargin0mm%
-	% }
-	% \item\relax%
-	% \fontfamily{hlcn}\selectfont%
-	\vskip1ex
-	% \begin{changebar}
-	\begin{tcolorbox}[arc=0mm,colback=DispositionColor!10,boxrule=0mm,colframe=DispositionColor!10,breakable]%
-	\refstepcounter{example}{{\mbox{\bfseries\color{DispositionColor}Beispiel~\theexample:}}}
-}%
-{
-	% \end{changebar}%
-	\end{tcolorbox}
-	% \endlist%
-	% \rm%
-}%
-\newcommand{\exampleskip}{\vspace*{-2em}}
-
-% use this to continue a previous example, use 
-%    \begin{examplecont}{label-of-original-example}
-\newenvironment{examplecont}[1]
-{%
-	% \list{}{%
-		% \leftmargin8mm%
-		% \rightmargin0mm%
-	% }
-	% \item\relax%
-	% \fontfamily{hlcn}\selectfont%
-	\vskip1ex
-	\begin{tcolorbox}[arc=0mm,colback=DispositionColor!10,boxrule=0mm,colframe=DispositionColor!10,breakable]%
-	{{\mbox{\bfseries\color{DispositionColor}Beispiel~\ref{#1} {\rmfamily(Fortsetzung)}:}}}
-	% \begin{changebar}
-}%
-{
-	% \end{changebar}%
-	\end{tcolorbox}
-	% \endlist%
-	% \rm%
-}%
 
 \newenvironment{todobox}{
 	\begin{tcolorbox}[arc=2mm,colback=Dandelion,boxrule=0mm,colframe=white,breakable]

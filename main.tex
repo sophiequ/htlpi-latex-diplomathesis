@@ -117,6 +117,7 @@
 % \usepackage{showframe} % shows the text frame (margins)
 
 \input{00-0-custom-commands}
+\usepackage{pdfpages}
 
 %% ========================================================================
 %%%% Main Document
@@ -165,6 +166,12 @@ Weitere Anhänge nach Bedarf:
 \item  Besprechungsprotokolle
 \end{itemize}
 
+Die nächste Seite zeigt das Einfügen von gesamten PDFs.
+% mit Kopf- und Fußzeile:
+% \includepdf[pagecommand={}]{figures/Beispiel.pdf}
+
+% ohne:
+\includepdf{figures/Beispiel.pdf}
 
 \end{document}
 
