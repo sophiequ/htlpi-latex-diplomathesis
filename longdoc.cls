@@ -499,21 +499,6 @@
 % \usepackage[osf]{mathpazo} % Palatino with smallcaps and oldstyle numbers
 % \usepackage[scaled]{helvet} % Helvetica, scaled 95%
 
-% \usepackage{newpxtext}
-% \usepackage{newpxmath}
-% \useosf % old-style figures in text, not in math
-
-
-% \renewcommand{\rmdefault}{cmr}
-% \renewcommand{\sfdefault}{cmss}
-% \renewcommand{\sfdefault}{hls}
-
-
-% using exotic lucida fonts in text:
-% {\fontfamily{hlcw}\selectfont asdf} % handwriting
-% {\fontfamily{hlce}\selectfont asdf} % calligraphy italic
-% {\fontfamily{hlcn}\selectfont asdf} % casual
-
 % \usepackage[xcolor,leftbars]{changebar}
 % \setlength{\changebarsep}{-3pt}
 % \setlength{\changebarwidth}{1pt}
@@ -531,6 +516,19 @@
 % \usepackage[scr=rsfso]{mathalfa}% \mathscr is fancier than \mathcal
 \useosf % old-style figures in text, not in math
 \def\disableosf{\fontfamily{zplx}\selectfont}
+
+\usepackage[scaled=0.85]{beramono}
+
+% \renewcommand{\rmdefault}{cmr}
+% \renewcommand{\sfdefault}{cmss}
+% \renewcommand{\sfdefault}{hls}
+
+% using exotic lucida fonts in text:
+% {\fontfamily{hlcw}\selectfont asdf} % handwriting
+% {\fontfamily{hlce}\selectfont asdf} % calligraphy italic
+% {\fontfamily{hlcn}\selectfont asdf} % casual
+
+
 
 %%%% this fixes a footnote-bug in newpxtext appearing in tcolorboxes
 %%%% solution due to http://tex.stackexchange.com/questions/153007/newpx-package-introduces-blank-space-after-footnote
@@ -612,11 +610,20 @@
 \usetikzlibrary{arrows,positioning,shapes}
 \usepackage{tikz-qtree}
 
-
-\lstdefinestyle{text}{basicstyle={\scriptsize\ttfamily},
-numbers=left,tabsize=4,showspaces=false,showstringspaces=false,stepnumber=1,
-captionpos=b,frame=none,stringstyle={\slshape\color{textcolor}},aboveskip=\bigskipamount,
-commentstyle=\color{darkgreen},breaklines=true,backgroundcolor=\color{DispositionColor!10}}
+\lstdefinestyle{text}{
+    basicstyle={\footnotesize\ttfamily},
+    numbers=left,tabsize=4,showspaces=false,
+    showstringspaces=false,stepnumber=1,
+    captionpos=b,
+    stringstyle={\slshape\color{green!50!black}},
+    aboveskip=\bigskipamount,
+    commentstyle=\color{black!60},
+    breaklines=true,
+    backgroundcolor=\color{DispositionColor!10},
+    keywordstyle={\color{DispositionColor}\bfseries},
+    frame=ltb, framesep=2mm, framerule=0pt,
+    xleftmargin=7mm
+}
 
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e} 
 \setlength{\algomargin}{1.5em}
