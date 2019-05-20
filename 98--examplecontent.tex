@@ -7,11 +7,11 @@
 %   This chapter contains material previously published ...
 % \end{chapternotes}
 
-\section{Basics}
-In the following we will  introduce the topics ... 
+\section{Beispiel-Inhalte}
+Dieser Abschnitt zeigt beispielhaft, wie man Inhalte wie Grafiken, Tabellen, Quelltext, Referenzen etc. einfügt. 
 
-This is my text with an example \autoref{fig:example} and example
-citation~\cite{Bringhurst1993} or \textcite{Bringhurst1993}. 
+\subsection{Grafiken}
+Eine Grafik liegt üblicherweise in einer fließenden \texttt{figure}-Umgebung und wird mittels \verb+\includegraphics+ eingebunden, siehe \autoref{fig:example}.
 
 \begin{figure}
 	\centering
@@ -20,31 +20,8 @@ citation~\cite{Bringhurst1993} or \textcite{Bringhurst1993}.
 	\label{fig:example}
 \end{figure}
 
-Now you are able to write your own document. Always keep in mind: it's
-the \emph{content} that matters, not the form. But good typography is
-able to deliver the content much better than information set with bad
-typography. This template allows you to concentrate on writing good
-content while the form is done by the template definitions.
+Mit Hilfe des Pakets \emph{TikZ} können auch Grafiken direkt in \LaTeX erstellt werden, siehe \zB \autoref{fig:def:prelim:ltl:kl-loop} auf Seite~\pageref{fig:def:prelim:ltl:kl-loop}.
 
-\section{Additional Features}
-
-You can use abbreviations using the \verb+\ac{}+ command like this: \ac{LTL}, 
-where the abbreviation is expanded on first use and then printed normally: \ac{LTL}. 
-
-Enumerations
-\begin{enumerate}
-	\item Foo
-	\item Bar
-\end{enumerate}
-
-and itemizations
-\begin{itemize}
-	\item One
-	\item Two
-	\item Three
-\end{itemize}
-
-TikZ Pictures like in \autoref{fig:def:prelim:ltl:kl-loop}
 \begin{figure}
   \centering
   \begin{tikzpicture}
@@ -63,12 +40,47 @@ TikZ Pictures like in \autoref{fig:def:prelim:ltl:kl-loop}
   \label{fig:def:prelim:ltl:kl-loop}
 \end{figure}
 
+\subsection{Referenzen}
 
-Tables: see \autoref{tab:example}.
+Referenzen werden in einer Datenbank abgelegt (hier unter {\ttfamily 99--references.bib}) und dann im Text wie folgt referenziert \cite{Bringhurst1993}. \textcite{Bringhurst1993} schrieb die "`Bibel der Typografie"'. 
+
+\subsection{Abkürzungen}
+
+Abkürzungen müssen in wissenschaftlichen Texten bei der ersten Verwendung definiert (erklärt). Dies wird hier durch den Befehl \verb+\ac+ erledigt. 
+
+Beispiel: Der Begriff \ac{LTL} wurde soeben definiert und bei der weiteren Verwendung von \ac{LTL} wird nurnoch die Abkürzung ausgegeben. Die Definitionen liegen zentral in der Datei \verb+acronyms.tex+. 
+
+\subsection{Aufzählungen und Aufzählungspunkte}
+Nummerierte Aufzählungen:
+\begin{enumerate}
+	\item Foo
+    	\begin{enumerate}
+        	\item kann auch 
+        	\item verschachtelt werden
+        \end{enumerate}
+	\item Bar
+\end{enumerate}
+
+Nicht nummerierte Aufzählungen:
+\begin{itemize}
+	\item One
+	\item Two
+	\item Three
+\end{itemize}
+
+\subsection{Tabellen}
+Eine Tabelle wie jene in \autoref{tab:example} 
+kann etwas einfacher mittels \url{http://www.tablesgenerator.com} erstellt werden. 
+
+Hinweise:
+\begin{itemize}
+    \item Tabellen werden normalerweise oben beschriftet. 
+    \item Aus typografischer Sicht sind vertikale Linien in Tabellen "`schlechter Stil"', die Spalten sollten aufgrund der Abstände erkennbar sein. 
+\end{itemize}
 
 \begin{table}
 	\centering
-	\caption{Example Table}
+	\caption{Beispiel für eine Tabelle}
 	\label{tab:example}
 	\begin{tabular}{llc}
 	\toprule
@@ -80,11 +92,17 @@ Tables: see \autoref{tab:example}.
 	\end{tabular}
 \end{table}
 
+\subsection{ToDo-Notizen}
+
 \begin{todobox}
-ToDo: write some more content
+ToDo: Diplomarbeit mit sinnvollen Inhalten füllen. 
 \end{todobox}
 
-See \autoref{lst:java}. 
+\subsection{Quellcode-Listings}
+
+Listings möglichst nicht als Screenshot einbinden (verpixeln, nicht änderbar, kein Seitenumbruch möglich,~\ldots), siehe \autoref{lst:java}. 
+
+Weitere Hinweise siehe \zB \url{https://www.overleaf.com/learn/latex/Algorithms#Listings_package}. 
 
 \begin{lstlisting}[style=text,language=Java,label=lst:java,caption={Java Code Example}]
 @FacesConverter(forClass = Fraction.class)
@@ -111,8 +129,3 @@ public class FractionConverter implements Converter {
 
 }
 \end{lstlisting}
-
-Now you are able to write your own document. 
-Always keep in mind: it's the \emph{content} that matters, not the form. 
-But good typography is able to deliver the content much better than information set with bad typography. 
-This template allows you to concentrate on writing good content while the form is done by the template definitions.
