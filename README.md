@@ -8,7 +8,9 @@ It's use is not compulsory (use MS Word if you want to :)) and basic understandi
 
 This template can be used via [overleaf.com](overleaf.com).
 
-[Example.pdf](src/Example.pdf)
+[Example.pdf](Example.pdf)
+
+![Preview of title page](Example.png)
 
 
 
