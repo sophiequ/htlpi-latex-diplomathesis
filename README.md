@@ -10,7 +10,7 @@ This template can be used via [overleaf.com](overleaf.com).
 
 [Example.pdf](Example.pdf)
 
-![Preview of title page](Example.png | width=300)
+![Preview of title page](Example.png =300x)
 
 
 
